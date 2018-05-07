@@ -25,6 +25,12 @@ namespace IdentitySample.Models
         {
         }
 
+        public System.Data.Entity.DbSet<PeniaBermeja.Models.Imagen> Imagenes { get; set; }
+
+        public System.Data.Entity.DbSet<PeniaBermeja.Models.Enlace> Enlaces { get; set; }
+
+        public System.Data.Entity.DbSet<PeniaBermeja.Models.EnlaceMejorado> EnlacesMejorados { get; set; }
+
         static ApplicationDbContext()
         {
             // Set the database intializer which is run once during application start
