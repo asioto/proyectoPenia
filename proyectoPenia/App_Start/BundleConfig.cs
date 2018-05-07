@@ -8,7 +8,7 @@ namespace IdentitySample
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Vendor/jquery.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -19,11 +19,25 @@ namespace IdentitySample
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                       "~/Vendor/tether.min.js",
+                        "~/Vendor/bootstrap.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/mdk").Include(
+                        "~/Vendor/dom-factory.js",
+                        "~/Vendor/material-design-kit.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/sidebarcollapse").Include(
+                       "~/Vendor/sidebar-collapse.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/appjs").Include(
+                        "~/Scripts/main.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/style.css",
+                      "~/Vendor/material-design-kit.css",
+                      "~/Vendor/sidebar-collapse.min.css"
+                      ).Include("~/Content/material-icons.css", new CssRewriteUrlTransform()).Include(
                       "~/Content/site.css"));
         }
     }
