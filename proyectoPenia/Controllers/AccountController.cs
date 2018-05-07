@@ -38,6 +38,12 @@ namespace IdentitySample.Controllers
             }
         }
 
+        [AllowAnonymous]
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
         //
         // GET: /Account/Login
         [AllowAnonymous]
