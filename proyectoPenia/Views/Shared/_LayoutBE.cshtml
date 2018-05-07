@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Peña Bermeja</title>
+
+    @Styles.Render("~/Content/css")
+    @{
+        if (Session["mopt"] == null)
+        {
+            Session["mopt"] = "0";
+        }
+        string activa = "active";
+    }
+    <style>
+        li ul li.especialEspaciado {
+            margin-left: 35px;
+        }
+    </style>
+</head>
+<body class="top-navbar">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
+        <!-- Toggle sidebar -->
+        <button class="navbar-toggler" type="button" data-toggle="sidebar" data-taget="#menubar" aria-controls="menubar"></button>
+        <!-- Brand -->
+
+        <a href="@Url.Action("Inicio", "Home")" class="navbar-brand">
+            <img src="~/Content/Imagenes/Logo.png" style="width:20%"/>
+        </a>
+
+
+        <div class="navbar-spacer"></div>
+
+        <!--Html.Partial("_LoginPartial")  PARA CUANDO ALGUIEN ESTA LOGUEADO-->
+
+    </nav>
+    <!-- // END Navbar -->
+    <div class="mdk-drawer-layout mdk-js-drawer-layout" push has-scrolling-region>
+        <div class="mdk-drawer-layout__content">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="mdk-drawer mdk-js-drawer" id="default-drawer">
+            <div class="mdk-drawer__content ">
+                <div id="menubar" class="sidebar sidebar-left sidebar-light sidebar-transparent-sm-up sidebar-p-y">
+
+                    <div class="sidebar-heading">Administración</div>
+                    <ul class="sidebar-menu">
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "Preguntas")">
+                                <i class="sidebar-menu-icon material-icons">dvr</i> Preguntas
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-heading">Ficheros Maestros</div>
+                    <ul class="sidebar-menu">
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "Oposiciones")">
+                                <i class="sidebar-menu-icon material-icons">dvr</i> Oposiciones
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "CategoriasOposiciones")">
+                                <i class="sidebar-menu-icon material-icons">label</i> Categorías Oposiciones
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "Dificultades")">
+                                <i class="sidebar-menu-icon material-icons">timeline</i> Dificultades Oposiciones
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "CategoriasBlog")">
+                                <i class="sidebar-menu-icon material-icons">label</i> Categorías Blog
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-heading">Web</div>
+
+                    <ul class="sidebar-menu">
+
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#collapse1">
+                                <i class="sidebar-menu-icon material-icons">home</i> Inicio
+                            </a>
+
+                            <ul id="collapse1" class="panel-collapse collapse">
+                                <li class="especialEspaciado"><a href="#">Acción #1</a></li>
+                                <li class="especialEspaciado"><a href="#">Acción #2</a></li>
+                                <li class="especialEspaciado"><a href="#">Acción #3</a></li>
+                            </ul>
+                        </li>
+
+    
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "Blog")">
+                                <i class="sidebar-menu-icon material-icons">developer_board</i> Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+
+                    <div class="sidebar-heading">Gestión de usuarios</div>
+                    <ul class="sidebar-menu">
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "UsersAdmin")">
+                                <i class="sidebar-menu-icon material-icons">dvr</i> Usuarios
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button" href="@Url.Action("Index", "RolesAdmin")">
+                                <i class="sidebar-menu-icon material-icons">label</i> Perfiles
+                            </a>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- // END Sidebar -->
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/mdk")
+    @Scripts.Render("~/bundles/sidebarcollapse")
+    @Scripts.Render("~/bundles/appjs")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", required: false)
+</body>
+</html>
+
+
