@@ -39,7 +39,7 @@ namespace IdentitySample.Controllers
         }
 
         [AllowAnonymous]
-        public ActionResult Admin()
+        public ActionResult Admin(string id)
         {
             return View();
         }
