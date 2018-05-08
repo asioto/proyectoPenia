@@ -31,6 +31,8 @@ namespace IdentitySample.Models
 
         public System.Data.Entity.DbSet<PeniaBermeja.Models.EnlaceMejorado> EnlacesMejorados { get; set; }
 
+        public System.Data.Entity.DbSet<PeniaBermeja.Models.Slider> Sliders { get; set; }
+
         static ApplicationDbContext()
         {
             // Set the database intializer which is run once during application start

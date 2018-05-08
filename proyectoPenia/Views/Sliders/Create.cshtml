@@ -1,0 +1,134 @@
+﻿@model PeniaBermeja.Models.Slider
+
+@{
+    ViewBag.Title = "Crear Slider";
+}
+
+@using (Html.BeginForm("Create", "Sliders", FormMethod.Post, htmlAttributes: new { @enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="card">
+            <div class="card-block" style="padding-bottom: 50px;">
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <div class="form-group col-md-12">
+                    <h5>Datos Slider</h5>
+                    <hr />
+
+                    <fieldset class="form-group">
+                        @Html.LabelFor(model => model.titulo, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.titulo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.titulo, "", new { @class = "text-danger" })
+
+                    </fieldset>
+                    <fieldset class="form-group">
+                        @Html.LabelFor(model => model.texto, new { @class = "control-label" })
+                        @Html.TextAreaFor(model => model.texto, new { @class = "form-control", @style = "height:100px; width:100%", @id = "summernote" })
+                        @Html.ValidationMessageFor(model => model.texto)
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <div class="col-md-7">
+                            @Html.LabelFor(model => model.imagen, new { @class = "control-label" })
+                            <input type="file" name="Imagenr" id="Imagen" class="form-control" />
+                            <small class="text-help">
+                                El tamaño recomendado para una visualización correcta de la imagen es de 400x500 píxeles.
+                            </small>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <div class="card-block" style="padding-bottom: 50px;">
+
+                <div class="form-group col-md-12">
+                    <h5>Botón 1</h5>
+                    <hr />
+
+                    <fieldset class="form-group col-md-4">
+                        @Html.LabelFor(model => model.boton1.texto, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.boton1.texto, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.boton1.texto, "", new { @class = "text-danger" })
+
+                    </fieldset>
+                    <fieldset class="form-group col-md-4">
+                        @Html.LabelFor(model => model.boton1.accion, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.boton1.accion, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.boton1.accion, "", new { @class = "text-danger" })
+                    </fieldset>
+                    <fieldset class="form-group col-md-4">
+                        @Html.LabelFor(model => model.boton1.controlador, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.boton1.controlador, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.boton1.controlador, "", new { @class = "text-danger" })
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <div class="card-block" style="padding-bottom: 50px;">
+
+                <div class="form-group col-md-12">
+                    <h5>Botón 2</h5>
+                    <hr />
+
+                    <fieldset class="form-group col-md-4">
+                        @Html.LabelFor(model => model.boton2.texto, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.boton2.texto, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.boton2.texto, "", new { @class = "text-danger" })
+
+                    </fieldset>
+                    <fieldset class="form-group col-md-4">
+                        @Html.LabelFor(model => model.boton2.accion, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.boton2.accion, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.boton2.accion, "", new { @class = "text-danger" })
+                    </fieldset>
+                    <fieldset class="form-group col-md-4">
+                        @Html.LabelFor(model => model.boton2.controlador, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.boton2.controlador, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.boton2.controlador, "", new { @class = "text-danger" })
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-right">
+        <button type="submit" class="btn btn-success">
+            <i class="material-icons btn__icon--left">add</i> Crear
+        </button>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>
+
+@section Styles {
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    @Styles.Render("~/Content/UploadCs")
+
+}
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#summernote').summernote();
+            $(".note-icon-picture,.note-icon-video").parent().hide();
+            $('#UploadForm').load("UploadFiles");
+        });
+    </script>
+
+}

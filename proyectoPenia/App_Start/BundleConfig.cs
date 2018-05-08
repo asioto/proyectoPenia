@@ -39,6 +39,14 @@ namespace IdentitySample
                       "~/Vendor/sidebar-collapse.min.css"
                       ).Include("~/Content/material-icons.css", new CssRewriteUrlTransform()).Include(
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/UploadCs").Include(
+                       "~/Content/UploadCss/jquery-ui.css",
+                       "~/Content/UploadCss/style.css",
+                        "~/Content/UploadCss/blueimp-gallery.min.css",
+                       "~/Content/UploadCss/jquery.fileupload.css",
+                       "~/Content/UploadCss/jquery.fileupload-ui.css"
+                       ));
         }
     }
 }

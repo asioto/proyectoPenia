@@ -33,10 +33,14 @@ namespace PeniaBermeja.Models
         public string titulo { get; set; }
         [Display(Name = "Texto")]
         public string texto { get; set; }
+        [Display(Name = "Posición ")]
+        public int posicion { get; set; }
         [Display(Name = "Boton1")]
         public virtual Enlace boton1 { get; set; }
         [Display(Name = "Boton2")]
         public virtual Enlace boton2 { get; set; }
+        [Display(Name = "Imagen")]
+        public virtual Imagen imagen { get; set; }
     }
 
     public class Enlace

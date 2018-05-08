@@ -1,0 +1,42 @@
+﻿@model PeniaBermeja.Models.Slider
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Slider</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.texto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.texto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.posicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.posicion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sliderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
