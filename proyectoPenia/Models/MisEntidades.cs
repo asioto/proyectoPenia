@@ -22,10 +22,21 @@ namespace PeniaBermeja.Models
 
         }
 
-
-
         public virtual ICollection<Enlace> MisEnlaces { get; set; }
         public virtual EnlaceMejorado Logo { get; set; }
+    }
+
+    public class Slider
+    {
+        public int sliderId { get; set; }
+        [Display(Name = "Titulo")]
+        public string titulo { get; set; }
+        [Display(Name = "Texto")]
+        public string texto { get; set; }
+        [Display(Name = "Boton1")]
+        public virtual Enlace boton1 { get; set; }
+        [Display(Name = "Boton2")]
+        public virtual Enlace boton2 { get; set; }
     }
 
     public class Enlace

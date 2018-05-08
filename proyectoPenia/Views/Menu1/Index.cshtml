@@ -1,0 +1,74 @@
+﻿@model IEnumerable<PeniaBermeja.Models.Enlace>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">Inicio</li>
+    <li class="breadcrumb-item active">Menu1</li>
+</ol>
+
+<div class="row">
+    <div class="card">
+        <div class="card-block">
+            <h5>Enlaces</h5>
+            <hr />
+            <p>
+                <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Create", "Menu1")'">
+                    <i class="material-icons btn__icon--left">add</i> Nuevo Enlace
+                </button>
+            </p>
+            <hr />
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.texto)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.accion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.controlador)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.posicion)
+                    </th>
+
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.texto)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.accion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.controlador)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.posicion)
+                        </td>
+
+                        <td>
+                            <button type="button" class="btn btn-warning btn-only-icon" onclick="location.href='@Url.Action("Edit", "Menu1", new { id = item.EnlaceId })'">
+                                <i class="material-icons btn__icon--left">create</i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-only-icon" onclick="location.href='@Url.Action("Delete", "Menu1", new { id = item.EnlaceId })'">
+                                <i class="material-icons btn__icon--left">delete</i>
+                            </button>
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+</div>
