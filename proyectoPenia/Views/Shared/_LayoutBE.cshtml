@@ -7,13 +7,7 @@
     <title>@ViewBag.Title - Peña Bermeja</title>
 
     @Styles.Render("~/Content/css")
-    @{
-        if (Session["mopt"] == null)
-        {
-            Session["mopt"] = "0";
-        }
-        string activa = "active";
-    }
+    
     <style>
         li ul li.especialEspaciado {
             margin-left: 35px;
@@ -48,45 +42,7 @@
         <!-- Sidebar -->
         <div class="mdk-drawer mdk-js-drawer" id="default-drawer">
             <div class="mdk-drawer__content ">
-                <div id="menubar" class="sidebar sidebar-left sidebar-light sidebar-transparent-sm-up sidebar-p-y">
-
-                    <div class="sidebar-heading">Administración</div>
-                    <ul class="sidebar-menu">
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button" href="@Url.Action("Index", "Preguntas")">
-                                <i class="sidebar-menu-icon material-icons">dvr</i> Preguntas
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="sidebar-heading">Ficheros Maestros</div>
-                    <ul class="sidebar-menu">
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button" href="@Url.Action("Index", "Oposiciones")">
-                                <i class="sidebar-menu-icon material-icons">dvr</i> Oposiciones
-                            </a>
-                        </li>
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button" href="@Url.Action("Index", "CategoriasOposiciones")">
-                                <i class="sidebar-menu-icon material-icons">label</i> Categorías Oposiciones
-                            </a>
-                        </li>
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button" href="@Url.Action("Index", "Dificultades")">
-                                <i class="sidebar-menu-icon material-icons">timeline</i> Dificultades Oposiciones
-                            </a>
-                        </li>
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button" href="@Url.Action("Index", "CategoriasBlog")">
-                                <i class="sidebar-menu-icon material-icons">label</i> Categorías Blog
-                            </a>
-                        </li>
-                    </ul>
+                <div id="menubar" class="sidebar sidebar-left sidebar-light sidebar-transparent-sm-up sidebar-p-y"> 
 
                     <div class="sidebar-heading">Web</div>
 
@@ -99,8 +55,8 @@
                             </a>
 
                             <ul id="collapse1" class="panel-collapse collapse">
-                                <li class="especialEspaciado"><a href="#">Acción #1</a></li>
-                                <li class="especialEspaciado"><a href="#">Acción #2</a></li>
+                                <li class="especialEspaciado"><a href="@Url.Action("Index", "Menu2")"> Menu 2</a></li>
+                                <li class="especialEspaciado"><a href="@Url.Action("Index", "Enlaces")">pRUEBA</a></li>
                                 <li class="especialEspaciado"><a href="#">Acción #3</a></li>
                             </ul>
                         </li>

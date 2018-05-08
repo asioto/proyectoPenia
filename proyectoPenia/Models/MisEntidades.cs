@@ -45,7 +45,7 @@ namespace PeniaBermeja.Models
         public string categoriaEnlace { get; set; }
         [Display(Name = "EnlacePadre")]
         public string enlacePadre { get; set; }
-        [Display(Name = "Posición en una caja")]
+        [Display(Name = "Posición ")]
         public int posicion { get; set; }
 
         public string Imprimete()
@@ -82,6 +82,7 @@ namespace PeniaBermeja.Models
                 Carpeta = @"/Content/UploadedImages";
             }
 
+
             string NuevoNombre = Categoria + "_" + Path.GetFileName(FileImagen.FileName); //Cambiamos el nombre
             this.nombre = NuevoNombre;
             this.carpeta = Carpeta;
@@ -89,6 +90,11 @@ namespace PeniaBermeja.Models
             FileImagen.SaveAs(Path.Combine(HttpContext.Current.Server.MapPath(carpeta), this.nombre)); //Guardamos el nombre 
 
             return "OK";
+        }
+
+        public string imagenPath()
+        {
+            return this.carpeta + "/" + this.nombre;
         }
     }
 

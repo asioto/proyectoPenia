@@ -4419,7 +4419,8 @@ button.close {
   background-color: #f7f7f9; }
 
 .bg-primary {
-  background-color: #2196F3 !important; }
+    background-color: #3d7749 !important;
+}
 
 a.bg-primary:focus, a.bg-primary:hover {
   background-color: #0c7cd5 !important; }
