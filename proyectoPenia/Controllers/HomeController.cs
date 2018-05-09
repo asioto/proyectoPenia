@@ -17,9 +17,20 @@ namespace IdentitySample.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contacto()
         {
-            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Noticias()
+        {
+
+            return View();
+        }
+
+        public ActionResult Nosotros()
+        {
 
             return View();
         }

@@ -4,42 +4,71 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.titulo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.texto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.posicion)
-        </th>
-        <th></th>
-    </tr>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">Inicio</li>
+    <li class="breadcrumb-item active">Sliders</li>
+</ol>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.titulo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.texto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.posicion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.sliderId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.sliderId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.sliderId })
-        </td>
-    </tr>
-}
+<div class="row">
+    <div class="card">
+        <div class="card-block">
+            <h5>Sliders</h5>
+            <hr />
+            <p>
+                <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Create", "Sliders")'">
+                    <i class="material-icons btn__icon--left">add</i> Nuevo Slider
+                </button>
+            </p>
+            <hr />
 
-</table>
+            <table class="table">
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.titulo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.imagen)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.posicion)
+                    </th>
+
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.titulo)
+                        </td>
+                        <td>
+                            <img src="@item.imagen.imagenPath()" style="width:90px;" />
+                        </td>      
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.posicion)
+                        </td>
+
+                        <td>
+                            <button type="button" class="btn btn-warning btn-only-icon" onclick="location.href='@Url.Action("Edit", "Sliders", new { id = item.sliderId })'">
+                                <i class="material-icons btn__icon--left">create</i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-only-icon" onclick="location.href='@Url.Action("Delete", "Sliders", new { id = item.sliderId })'">
+                                <i class="material-icons btn__icon--left">delete</i>
+                            </button>
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+</div>
+

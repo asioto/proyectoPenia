@@ -1,0 +1,287 @@
+/* ==========================================================================
+   Rules
+   ========================================================================== */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #cad2d7; padding: 0; margin: 3em 0;  }
+hr.dash { display: block; height: 1px; border: 0; border-top: 1px dashed #cad2d7; margin: 2em 0; padding: 0; }
+hr.dots { display: block; height: 1px; border: 0; border-top: 1px dotted #cad2d7; margin: 2em 0; padding: 0; }
+
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+a.btn{
+	border: none;
+	font-weight: normal;
+	padding: .6em 1.2em;
+	white-space: normal;
+	display: inline-block;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+	margin-bottom: .5em;
+	margin-top: .5em;
+	background-color: #fd542d;
+	text-align: center; 
+}
+a.btn:hover{
+	background-color: #3c464c; 
+}
+a.small-btn{
+	font-size: 14px;
+	padding: .4em .9em;
+}
+a.xsmall-btn{
+	font-size: 12px;
+	padding: .2em .7em;
+}
+
+
+
+/* ==========================================================================
+   Lead Text
+   ========================================================================== */
+.lead, blockquote{ }
+
+/* ==========================================================================
+   Highlight Text
+   ========================================================================== */
+.highlight{ }
+
+
+/* ==========================================================================
+   Message Boxes
+   ========================================================================== */
+.message{
+	border-width: 1px;
+	border-style: solid;
+	display: block;
+	padding: .5em 1em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 1em;
+}
+.message.success{
+	border-color: #a2e29d;
+	background: #e2f5e4;
+	color: #333;
+}
+.message.info{
+	border-color: #7bb8e2;
+	background: #d2e4f1;
+	color: #333;
+}
+.message.error{
+	border-color: #fc604a;
+	background: #ffd4ce;
+	color: #333;
+}
+.message.notice{
+	border-color: #fcc84a;
+	background: #fffcce;
+	color: #333;
+}
+
+
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+ul.tab-nav {
+	position: relative;
+	width:100%;
+	margin: 0 auto!important;
+	top: 1px;
+}
+ul.tab-nav li {
+	float:left;
+	position:relative;
+	display:block;
+	text-align:center;
+	margin-right: 1px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom: none;
+	padding: .5em 1em!important;
+	text-transform: none;
+} 
+ul.tab-nav li:before{
+	display: none;
+}
+ul.tab-nav li:hover {
+	cursor:pointer;
+}
+ul.tab-nav li.active {
+	z-index:50;
+	border: none;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom: none;
+}
+.tab-content-block {
+	clear:both;
+	position:relative;
+	width: 100%;
+	border-style: solid;
+	border-width: 1px;
+}
+.tab_content {
+	padding: 0px .5em 0px .5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+h3.v_nav {display: none;}
+
+h3.v_nav{
+	background: #ededed;
+	text-transform: none;
+	font-size: 16px;
+}	
+
+
+/* ==========================================================================
+   Toggles
+   ========================================================================== */
+.toggle-btn { 
+	text-decoration:none; 
+	display:block;
+}
+.toggle-content{ 
+	display:none;
+}
+.toggle-content.active{
+	display: block;
+}
+ul.toggle li:first-child, ul.accordion li:first-child, ul.sc_accordion li:first-child{
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+ul.toggle li {
+	position:relative;
+	overflow:hidden;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding-top: .25em;
+	padding-bottom: .25em;
+}
+ul.toggle li a{
+	padding-top: .45em;
+	padding-right: 0;
+	padding-bottom: .45em;
+}
+ul.toggle li:before{
+	top: 13px;
+}
+
+ul.toggle{
+	margin-bottom: 1.5em;
+}
+
+
+
+/* ==========================================================================
+   Accordians
+   ========================================================================== */
+.sc_accordion-btn { 
+	text-decoration:none; 
+	display:block;
+}
+.sc_accordion-content{ 
+	display:none;
+}
+.sc_accordion-content.active{
+	display: block;
+}
+ul.sc_accordion li {
+	position:relative;
+	overflow:hidden;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding-top: .25em!important;
+	padding-bottom: .25em!important;
+}
+ul.sc_accordion li a{
+	padding-top: .45em;
+	padding-right: 0;
+	padding-bottom: .45em;
+}
+ul.sc_accordion li:before{
+	top: 13px!important;
+}
+ul.sc_accordion{
+	margin-bottom: 1.5em;
+}
+
+
+
+/* ==========================================================================
+   Mosaic Styles
+   ========================================================================== */
+.mosaic-block {
+	position:relative;
+	overflow:hidden;
+	background:#ffffff url(img/progress.html) no-repeat center center;
+	margin: 1em 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.widget .mosaic-block {
+	margin-top: .25em;
+	margin-bottom: .25em;
+}
+.mosaic-block img{
+	margin: 0;
+	border: none;
+}
+.mosaic-backdrop {
+	display:none;
+	top:0;
+	height:100%;
+	width:100%;
+	background:#fff;
+}
+	
+.mosaic-overlay {
+	display:none;
+	z-index:5;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#111;
+}		
+.fade .mosaic-overlay {
+	background:url(img/hover-magnify.html) no-repeat center center;
+	background-color: rgba(0, 0, 0, .5);
+	opacity:0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+	filter:alpha(opacity=00);
+	display:none;
+}
+.fade .mosaic-overlay.link{
+	background:url(img/hover-gotopost.html) no-repeat center center;
+	background-color: rgba(0, 0, 0, .5);
+	opacity:0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+	filter:alpha(opacity=00);
+	display:none;
+}
+@media (min--moz-device-pixel-ratio: 1.5),
+	(-o-min-device-pixel-ratio: 3/2),
+	(-webkit-min-device-pixel-ratio: 1.5),
+	(min-device-pixel-ratio: 1.5),
+	(min-resolution: 1.5dppx) {
+	/* on retina, use image that's scaled by 2 */
+.fade .mosaic-overlay {
+	background:url(img/hover-magnify%402x.html) no-repeat center center;
+	background-size: 18px 18px;
+}
+}

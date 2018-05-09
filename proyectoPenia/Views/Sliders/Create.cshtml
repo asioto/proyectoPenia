@@ -17,19 +17,28 @@
                     <h5>Datos Slider</h5>
                     <hr />
 
-                    <fieldset class="form-group">
+                    <fieldset class="form-group col-md-6">
                         @Html.LabelFor(model => model.titulo, new { @class = "control-label" })
                         @Html.EditorFor(model => model.titulo, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.titulo, "", new { @class = "text-danger" })
 
                     </fieldset>
-                    <fieldset class="form-group">
+
+                    <fieldset class="form-group col-md-6">
+                        @Html.LabelFor(model => model.posicion, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.posicion, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.posicion)
+                    </fieldset>
+
+                    <fieldset class="form-group col-md-12">
                         @Html.LabelFor(model => model.texto, new { @class = "control-label" })
                         @Html.TextAreaFor(model => model.texto, new { @class = "form-control", @style = "height:100px; width:100%", @id = "summernote" })
                         @Html.ValidationMessageFor(model => model.texto)
                     </fieldset>
 
-                    <fieldset class="form-group">
+
+
+                    <fieldset class="form-group col-md-12">
                         <div class="col-md-7">
                             @Html.LabelFor(model => model.imagen, new { @class = "control-label" })
                             <input type="file" name="Imagenr" id="Imagen" class="form-control" />

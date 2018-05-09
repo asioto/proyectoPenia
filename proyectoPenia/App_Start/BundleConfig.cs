@@ -47,6 +47,7 @@ namespace IdentitySample
                        "~/Content/UploadCss/jquery.fileupload.css",
                        "~/Content/UploadCss/jquery.fileupload-ui.css"
                        ));
+
         }
     }
 }

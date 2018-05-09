@@ -63,13 +63,13 @@ namespace proyectoPenia.Controllers
                 db.Enlaces.Add(boton1);
                 slider.boton1 = boton1;
 
-                //Creacion de boton1
+                //Creacion de boton2
                 Enlace boton2 = new Enlace();
                 boton2.texto = Request.Form["boton2.texto"];
                 boton2.accion = Request.Form["boton2.accion"];
                 boton2.controlador = Request.Form["boton2.controlador"];
-                db.Enlaces.Add(boton1);
-                slider.boton1 = boton1;
+                db.Enlaces.Add(boton2);
+                slider.boton2 = boton2;
 
             //Creacion Imagen
             string carpeta = @"/Content/UploadedImages"; //Dirección donde se guardan las imagenes
@@ -110,15 +110,61 @@ namespace proyectoPenia.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "sliderId,titulo,texto,posicion")] Slider slider)
+        [ValidateInput(false)] //Nos deja introducir texto con etiquetas
+        public ActionResult Edit([Bind(Include = "sliderId,titulo,texto,posicion")] Slider slider , HttpPostedFileBase Imagenr)
         {
+            Slider SliderMod = db.Sliders.Find(slider.sliderId);
+
             if (ModelState.IsValid)
             {
-                db.Entry(slider).State = EntityState.Modified;
+                SliderMod.titulo = slider.titulo;
+                SliderMod.texto = slider.texto;
+                SliderMod.posicion = slider.posicion;
+
+                //Modificar de boton1
+                Enlace boton1 = db.Enlaces.Find(SliderMod.boton1.EnlaceId);
+                boton1.texto = Request.Form["boton1.texto"];
+                boton1.accion = Request.Form["boton1.accion"];
+                boton1.controlador = Request.Form["boton1.controlador"];
+                db.Entry(boton1).State = EntityState.Modified;
+
+                //Modificar de boton2
+                Enlace boton2 = db.Enlaces.Find(SliderMod.boton2.EnlaceId);
+                boton2.texto = Request.Form["boton2.texto"];
+                boton2.accion = Request.Form["boton2.accion"];
+                boton2.controlador = Request.Form["boton2.controlador"];
+                db.Entry(boton2).State = EntityState.Modified;
+
+
+                //Modificacion Imagen
+                
+                if (Imagenr != null && Imagenr.ContentLength > 0)
+                {
+                    string carpeta = @"/Content/UploadedImages"; //Dirección donde se guardan las imagenes
+
+                    try //Intetamos eliminar la imagen que tenia puesta anteriormente
+                    {
+                        System.IO.File.Delete(Server.MapPath(SliderMod.imagen.carpeta) + "/" + SliderMod.imagen.nombre);
+                        db.Imagenes.Remove(SliderMod.imagen);
+                    }
+                    catch
+                    {
+
+                    }
+                    
+                    //Creamos y añadimos la nueva imagen
+                    Imagen imagen = new Imagen();
+                    imagen.GuardarImagen(Imagenr, carpeta, "Slider");
+                    db.Imagenes.Add(imagen);
+                    SliderMod.imagen = imagen;
+
+                }
+
+                db.Entry(SliderMod).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(slider);
+            return View(SliderMod);
         }
 
         // GET: Sliders/Delete/5
@@ -142,6 +188,19 @@ namespace proyectoPenia.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Slider slider = db.Sliders.Find(id);
+            db.Enlaces.Remove(slider.boton1);
+            db.Enlaces.Remove(slider.boton2);
+
+            try //Intetamos eliminar la imagen que tenia puesta anteriormente
+            {
+                System.IO.File.Delete(Server.MapPath(slider.imagen.carpeta) + "/" + slider.imagen.nombre);
+                db.Imagenes.Remove(slider.imagen);
+            }
+            catch
+            {
+
+            }
+
             db.Sliders.Remove(slider);
             db.SaveChanges();
             return RedirectToAction("Index");

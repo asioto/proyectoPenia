@@ -1,0 +1,580 @@
+﻿
+@{
+    ViewBag.Title = "Contacto";
+    Layout = "~/Views/Shared/_LayoutFE.cshtml";
+}
+
+
+
+<body class="home-page home page page-id-32 page-template page-template-page-pagebuilder page-template-page-pagebuilder-php tribe-theme-parent-sport tribe-theme-child-sport-preview no-js">
+
+    <!-- MAINTENANCE MODE -->
+    <!-- HEADER -->
+    <!-- HEADER -->
+    <div class="sticky-header-wrapper clearfix">
+        <!-- TEMPLATE HEADER: pre_secondary_social -->
+        <!-- Start Pre Header Container -->
+        <div class="outter-wrapper pre-header-container pre-head-lr ">
+            <div class="wrapper">
+                <div class="clearfix">
+                    <!-- PREHEADER LEFT SLOT -->
+                    <div class="pre-header left">
+                        <!-- WORDPRESS MENU: SECONDARY MENU -->
+                        <nav id="nav-wrap2" class="secondary_menu_container">
+                            <ul id="secondary_menu" class="secondary_menu nav">
+                                <li id="menu-item-1225" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-32 current_page_item menu-item-1225"><a href="#">Inicio</a></li>
+                                <!--<li id="menu-item-1226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1226"><a href="#">Pages</a></li>-->
+                                <li id="menu-item-1224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1224"><a href="@Url.Action("Contacto","Home")">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Outter Wrapper -->
+        <!-- TEMPLATE HEADER: main_custom_left_right -->
+        <!-- Start main Header Container -->
+        <div class="outter-wrapper header-container canon_sticky">
+            <div class="wrapper">
+                <div class="clearfix">
+                    <!-- MAIN HEADER LEFT SLOT -->
+                    <div class="main-header left">
+                        <div id="header_logo">
+                            <a href="#" class="logo"><img src="~/Scripts/wp-content/themes/sport/img/LogoPeña.png" alt="Logo"></a>
+                        </div>
+                    </div>
+
+                    <!-- MAIN HEADER RIGHT SLOT -->
+                    <div class="main-header right">
+                        <!-- Start Mobile Menu Icon -->
+                        <div class="mobile-header">
+                            <a class="responsive-menu-button" href="#">
+                                <em class="fa fa-bars"></em> Menu
+                            </a>
+                        </div>
+
+                        <div id="sidr-navigation-container" class="clearfix">
+                            <ul class="menuHideBtn">
+                                <li><a class="closebtn fa" href="#">&#xf00d;</a></li>
+                            </ul>
+                            <!-- WORDPRESS MENU: PRIMARY -->
+                            <nav id="nav-wrap" class="primary_menu_container">
+                                <ul id="primary_menu" class="primary_menu nav">
+                                    <li id="menu-item-1201" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-32 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1201">
+                                        <a href="@Url.Action("Index","Home")">Inicio</a>
+                                    </li>
+                                    <li id="menu-item-1208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1208">
+                                        <a href="@Url.Action("Nosotros","Home")">¿Quíenes Somos?</a>
+                                    </li>
+                                    <li id="menu-item-1203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1203">
+                                        <a href="#">Servicios</a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-1215" class="fa fa-angle-right menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-1215">
+                                                <a href="#">Pistas deportivas</a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-1216" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1216"><a href="#">Golf</a></li>
+                                                    <li id="menu-item-1218" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1218"><a href="#">Padel</a></li>
+                                                    <li id="menu-item-1219" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1219"><a href="#">fooball sala</a></li>
+                                                    <li id="menu-item-1220" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1220"><a href="#">Voley playa</a></li>
+                                                </ul>
+                                            </li>
+                                            <li id="menu-item-1204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1204"><a href="#">Parking</a></li>
+                                            <li id="menu-item-1205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1205"><a href="#">Restaurante</a></li>
+                                            <li id="menu-item-1175" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1175"><a href="#">Paseo</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-1197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1197">
+                                        <a href="@Url.Action("Noticias","Home")">Noticias</a>
+                                    </li>
+                                    <li id="menu-item-1198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1197">
+                                        <a href="#">Torneos</a>
+                                    </li>
+                                    <li id="menu-item-1198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1197">
+                                        <a href="@Url.Action("Contacto","Home")">Contacto</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Outter Wrapper -->
+        <!-- TEMPLATE HEADER: post_custom_left_right -->
+        <!-- Start Post Header Container -->
+        <div class="outter-wrapper post-header-container ">
+            <div class="wrapper">
+                <div class="clearfix">
+                    <!-- POST HEADER LEFT SLOT -->
+                    <div class="post-header left">
+
+                        <ul class="social-link">
+                            <li><a href="#" target='_blank'><em class="fa fa-facebook-square"></em></a></li>
+                            <li><a href="#" target='_blank'><em class="fa fa-twitter-square"></em></a></li>
+                            <li><a href="#" target='_blank'><em class="fa fa-rss-square"></em></a></li>
+
+                        </ul>
+                    </div>
+
+                    <!-- POST HEADER RIGHT SLOT -->
+                    <div class="post-header right">
+
+                        <ul class="header_toolbar">
+
+                            <li class="toolbar-search-btn"><em class="fa fa-search"></em></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Outter Wrapper -->
+        <!-- SEARCH BOX -->
+        <!-- Start Outter Wrapper -->
+        <div class="outter-wrapper search-header-container" data-status="closed">
+            <!-- Start Main Navigation -->
+            <div class="wrapper">
+                <header class="clearfix">
+                    <ul class="search_controls">
+                        <li class="search_control_search"><em class="fa fa-search"></em></li>
+                        <li class="search_control_close"><em class="fa fa-times"></em></li>
+                    </ul>
+                    <form role="search" method="get" id="searchform" action="#/">
+                        <input type="text" id="s" class="full" name="s" placeholder="Que estás buscando?" />
+                    </form>
+
+                </header>
+            </div>
+            <!-- End Main Navigation -->
+        </div>
+        <!-- End Outter Wrapper -->
+    </div>
+    <!-- Start Outter Wrapper -->
+    <div class="outter-wrapper feature pb_hr">
+        <hr>
+    </div>
+    <!-- End Outter Wrapper -->
+    <!-- BEGIN LOOP -->
+    <!-- BLOCK: REVSLIDER-->
+    <div id="pb_block-0" class="outter-wrapper feature pb_block pb_block_main pb_revslider">
+
+        <!-- block styles -->
+        <style type="text/css" scoped>
+            #pb_block-0 {
+            }
+
+                #pb_block-0 blockquote,
+                #pb_block-0 h1,
+                #pb_block-0 h1 *,
+                #pb_block-0 h2,
+                #pb_block-0 h2 *,
+                #pb_block-0 h3,
+                #pb_block-0 h3 *,
+                #pb_block-0 h4,
+                #pb_block-0 h4 *,
+                #pb_block-0 h5,
+                #pb_block-0 h5 *,
+                #pb_block-0 h6,
+                #pb_block-0 h6 *,
+                #pb_block-0 a,
+                #pb_block-0 p {
+                }
+        </style>
+    </div>
+    <!-- END BLOCK -->
+    <!-- start outter-wrapper -->
+    <div id="pb_block-2" class="outter-wrapper feature callout-block centered pb_block pb_block_main pb_divider" data-stellar-background-ratio='0.2'>
+
+        <!-- block styles -->
+        <style type="text/css" scoped>
+            #pb_block-2 {
+                background-color: #ececec;
+            }
+
+                #pb_block-2 blockquote,
+                #pb_block-2 h1,
+                #pb_block-2 h1 *,
+                #pb_block-2 h2,
+                #pb_block-2 h2 *,
+                #pb_block-2 h3,
+                #pb_block-2 h3 *,
+                #pb_block-2 h4,
+                #pb_block-2 h4 *,
+                #pb_block-2 h5,
+                #pb_block-2 h5 *,
+                #pb_block-2 h6,
+                #pb_block-2 h6 *,
+                #pb_block-2 a,
+                #pb_block-2 p {
+                }
+        </style>
+
+
+    </div>
+    <!-- end outter-wrapper -->
+    <!-- END BLOCK -->
+    <!-- BLOCK: TEXT SECTION-->
+    <!-- start outter-wrapper -->
+    <div id="pb_block-3" class="outter-wrapper centered pb_block pb_block_main pb_text_section" data-stellar-background-ratio='0.75'>
+
+        <!-- block styles -->
+        <style type="text/css" scoped>
+            #pb_block-3 {
+                background-image: url('../../Scripts/wp-content/uploads/sites/2/2014/10/parallax-bg21.jpg');
+            }
+
+                #pb_block-3 blockquote,
+                #pb_block-3 h1,
+                #pb_block-3 h1 *,
+                #pb_block-3 h2,
+                #pb_block-3 h2 *,
+                #pb_block-3 h3,
+                #pb_block-3 h3 *,
+                #pb_block-3 h4,
+                #pb_block-3 h4 *,
+                #pb_block-3 h5,
+                #pb_block-3 h5 *,
+                #pb_block-3 h6,
+                #pb_block-3 h6 *,
+                #pb_block-3 a,
+                #pb_block-3 p {
+                    color: #ffffff;
+                }
+        </style>
+
+
+    </div>
+    <!-- end outter-wrapper -->
+    <!-- END BLOCK -->
+    <!-- BLOCK: DIVIDER-->
+    <!-- start outter-wrapper -->
+    <div id="pb_block-4" class="outter-wrapper feature callout-block centered pb_block pb_block_main pb_divider" data-stellar-background-ratio='0.2'>
+
+        <!-- block styles -->
+        <style type="text/css" scoped>
+            #pb_block-4 {
+                background-color: #ececec;
+            }
+
+                #pb_block-4 blockquote,
+                #pb_block-4 h1,
+                #pb_block-4 h1 *,
+                #pb_block-4 h2,
+                #pb_block-4 h2 *,
+                #pb_block-4 h3,
+                #pb_block-4 h3 *,
+                #pb_block-4 h4,
+                #pb_block-4 h4 *,
+                #pb_block-4 h5,
+                #pb_block-4 h5 *,
+                #pb_block-4 h6,
+                #pb_block-4 h6 *,
+                #pb_block-4 a,
+                #pb_block-4 p {
+                }
+        </style>
+
+    </div>
+    <!-- end outter-wrapper -->
+    <!-- END BLOCK -->
+    <!--INICIO CONTENIDO DE LA PAGINA-->
+
+
+
+
+    <div class="outter-wrapper canon_blog">
+        <!-- start main-container -->
+        <div class="main-container">
+            <!-- start main wrapper -->
+            <div class="main wrapper clearfix">
+                <!-- start main-content -->
+                <div class="main-content three-fourths">
+
+
+
+                    <!-- MAIN LOOP -->
+
+
+                    <div id="post-156" class="clearfix post-156 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-news category-reviews tag-coach tag-field tag-finals tag-player tag-team">
+
+                        <!-- featured image -->
+                        <div class="third feat-image-post"><div class="mosaic-block fade"><a href="../multi-post/index.html" class="mosaic-overlay link" title="fill-10"></a><div class="mosaic-backdrop"><img src="~/Scripts/wp-content/uploads/sites/2/2014/10/fill-10.jpg" alt="" /></div></div></div>
+
+                        <div class="blogroll-post two-thirds last">
+                            <!-- title -->
+                            <h3><a href="../multi-post/index.html">Multi-Post</a></h3>
+
+                            <!-- excerpt -->
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum ...
+                            <!-- read more -->
+                            <a href="../multi-post/index.html" class="more">More</a>
+                        </div>
+                    </div>
+                    <hr />
+
+
+
+
+                    <div id="post-1079" class="clearfix post-1079 post type-post status-publish format-standard has-post-thumbnail hentry category-carousel category-news category-training">
+
+                        <!-- featured image -->
+                        <div class="third feat-image-post"><div class="mosaic-block fade"><a href="../no-time-to-rest/index.html" class="mosaic-overlay link" title="fill-9"></a><div class="mosaic-backdrop"><img src="~/Scripts/wp-content/uploads/sites/2/2014/10/fill-9.jpg" alt="" /></div></div></div>
+
+                        <div class="blogroll-post two-thirds last">
+                            <!-- title -->
+                            <h3><a href="../no-time-to-rest/index.html">No time to rest</a></h3>
+
+                            <!-- excerpt -->
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+
+                            Maecenas faucibus ...
+                            <!-- read more -->
+                            <a href="../no-time-to-rest/index.html" class="more">More</a>
+                        </div>
+                    </div>
+                    <hr />
+
+
+
+
+                    <div id="post-149" class="clearfix post-149 post type-post status-publish format-video hentry category-news category-training tag-coach tag-field tag-finals tag-player tag-team post_format-post-format-video">
+
+                        <!-- featured image -->
+                        <div class="third feat-image-post"><iframe src="http://player.vimeo.com/video/35120958?title=0&amp;byline=0&amp;portrait=0&amp;color=ffa600" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+                        <div class="blogroll-post two-thirds last">
+                            <!-- title -->
+                            <h3><a href="../fast-is-faster/index.html">Fast is Faster</a></h3>
+
+                            <!-- excerpt -->
+                            Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.
+                            <!-- read more -->
+                            <a href="../fast-is-faster/index.html" class="more">More</a>
+                        </div>
+                    </div>
+                    <hr />
+
+
+                    <!-- END LOOP -->
+                    <!-- PAGINATION -->
+                    <div class="clearfix">
+                        <ul class='page-numbers'>
+                            <li><span class='page-numbers current'>1</span></li>
+                            <li><a class='page-numbers' href='index6146.html?paged=2'>2</a></li>
+                            <li><a class="next page-numbers" href="index6146.html?paged=2">Next <i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!-- end main-content -->
+                <!-- SIDEBAR -->
+                <!-- SIDEBAR WIDGET AREA -->
+                <aside class="right-aside fourth last">
+                    <div id="recent-posts-2" class="widget widget_recent_entries">
+                        <h3 class="widget-title">Destacadas</h3>		<ul>
+                            <li>
+                                <a href="../no-time-to-rest/index.html">No time to rest</a>
+                            </li>
+                            <li>
+                                <a href="../multi-post/index.html">Multi-Post</a>
+                            </li>
+                            <li>
+                                <a href="../fast-is-faster/index.html">Fast is Faster</a>
+                            </li>
+                       
+                            <li>
+                                <a href="../a-game-to-remember/index.html">A game to remember</a>
+                            </li>
+                        </ul>
+
+                    <hr class="dots" />
+
+                </aside>
+                <!-- end sidebar -->
+
+
+            </div>
+            <!-- end main wrapper -->
+        </div>
+        <!-- end main-container -->
+    </div>
+
+
+
+
+
+
+
+
+    <!--FIN CONTENIDO DE LA PAGINA-->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <footer>
+        <!-- PRE FOOTER -->
+
+        <div class="outter-wrapper pre-footer breadcrumb-wrapper feature">
+            <div class="wrapper">
+                <ul class="canon_breadcrumbs"><li><a href="#"><i class="fa fa-home"></i></a></li></ul>
+            </div>
+        </div>
+        <!-- MAIN FOOTER -->
+        <!-- Start Widget Footer -->
+        <div class="outter-wrapper main-footer widget-footer main">
+            <div class="wrapper clearfix">
+
+
+                <!-- FOOTER: WIDGET AREA -->
+                <div class=" fourth ">
+                    <div id="text-2" class="widget widget_text">
+                        <h3 class="widget-title">Contactanos</h3>			<div class="textwidget">
+                            <ul>
+                                <li>
+                                    <strong>Teléfono:</strong><br />
+                                    +34 603 184 333
+                                </li> 555 555 1234
+                                <li>d.sanchez@dsmingenieria.es</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FOOTER: WIDGET AREA -->
+                <div class=" fourth ">
+                    <div id="text-3" class="widget widget_text">
+                        <h3 class="widget-title">Nuestra mision</h3><div class="textwidget">
+                            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus.
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FOOTER: WIDGET AREA -->
+                <div class=" fourth ">
+
+                    <div id="sport_opening_hours-2" class="widget sport_opening_hours">
+                        <h3 class="widget-title">Horario</h3>
+                        <ul class="ophours">
+                            <li>Mondays	<span>Cerrado</span></li>
+                            <li>Lun-Vier	<span>10am - 8pm</span></li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- FOOTER: WIDGET AREA -->
+                <div class=" fourth last">
+                    <div id="text-4" class="widget widget_text">
+                        <div class="textwidget">
+                            <a class="logo" style="float: none;" href="#">
+                                <img alt="Logo" src="~/Scripts/wp-content/themes/sport/img/LogoPeña.png">
+                            </a>
+                            <ul>
+                                <li>
+                                    <strong>Dirección:</strong><br />
+                                    Calle 1 numero 1 escalera 2
+                                </li>
+                                <li><a href="#">Ver en Mapa</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- End Widget Footer -->
+        <!-- POST FOOTER -->
+
+        <div class="outter-wrapper post-footer feature">
+            <div class="wrapper">
+                <div class="clearfix">
+                    <div class="foot left">© Copyright  <a href="http://ebsoft.es" target="_blank">ebsoft.es</a></div>
+                    <div class="foot right">
+
+                        <ul class="social-link">
+                            <li><a href="#" target='_blank'><em class="fa fa-facebook-square"></em></a></li>
+                            <li><a href="#" target='_blank'><em class="fa fa-twitter-square"></em></a></li>
+                            <li><a href="#" target='_blank'><em class="fa fa-rss-square"></em></a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- GOOGLE ANALYTICS-->
+    <!-- WP FOOTER -->
+    <!-- Generated in 5.356 seconds. (161 q) -->
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "../../Scripts/connect.facebook.net/en_US/all.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript">
+        function revslider_showDoubleJqueryError(sliderID) {
+            var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+            errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+            errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+            errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+            errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+            jQuery(sliderID).show().html(errorMessage);
+        }
+    </script>
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var _wpcf7 = { "loaderUrl": "http:\/\/themecanon.net\/themes\/sport-1\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif", "sending": "Sending ..." };
+        /* ]]> */
+    </script>
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = { "ajax_url": "\/themes\/sport-1\/wp-admin\/admin-ajax.php", "i18n_view_cart": "View Cart", "cart_url": "http:\/\/themecanon.net\/themes\/sport-1\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+        /* ]]> */
+    </script>
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var woocommerce_params = { "ajax_url": "\/themes\/sport-1\/wp-admin\/admin-ajax.php" };
+        /* ]]> */
+    </script>
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = { "ajax_url": "\/themes\/sport-1\/wp-admin\/admin-ajax.php", "fragment_name": "wc_fragments" };
+        /* ]]> */
+    </script>
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var extData = { "ajaxUrl": "http:\/\/themecanon.net\/themes\/sport-1\/wp-admin\/admin-ajax.php", "pageType": "page", "templateURI": "http:\/\/themecanon.net\/themes\/sport-1\/wp-content\/themes\/sport", "canonOptions": { "reset_all": "", "reset_basic": "", "use_responsive_design": "checked", "use_boxed_design": "unchecked", "use_construction_mode": "checked", "construction_msg": "This site is under construction!", "sidebars_alignment": "right", "dev_mode": "checked", "autocomplete_words": "c++, jquery, I like jQuery, java, php, coldfusion, javascript, asp, ruby", "hide_theme_meta_description": "unchecked", "hide_theme_og": "unchecked", "fontface_fix": "unchecked", "favicon_url": "", "google_analytics_code": "" }, "canonOptionsFrame": { "header_padding_top": "10", "header_padding_bottom": "10", "pos_left_element_top": "0", "pos_left_element_left": "0", "pos_right_element_top": "30", "pos_right_element_right": "0", "use_sticky_preheader": "unchecked", "use_sticky_header": "checked", "use_sticky_postheader": "unchecked", "sticky_turn_off_width": "768", "add_search_btn_to_primary": "unchecked", "add_search_btn_to_secondary": "unchecked", "status_of_scroll_to_menu_items": "normal", "pre_header_layout": "pre_custom_left_right", "main_header_layout": "main_custom_left_right", "main_custom_left": "logo", "main_custom_right": "primary", "post_header_layout": "post_custom_left_right", "logo_url": "", "logo_text_size": "28", "logo_max_width": "151", "header_img_homepage_only": "unchecked", "header_img_url": "http:\/\/themecanon.net\/themes\/sport-1\/wp-content\/uploads\/sites\/2\/2014\/10\/skulls.png", "header_img_bg_color": "#f0f0f0", "header_img_height": "300", "header_img_use_parallax": "checked", "header_img_parallax_ratio": "0.5", "header_img_text": "<h3>Header Image With Parallax Scrolling - What's Not To Like!<\/h3>[button]Buy Sport Today[\/button]", "header_img_text_alignment": "centered", "header_img_text_margin_top": "150", "header_banner_code": "<a href='http:\/\/www.themeforest.com\/?ref=themecanon' target='_blank'><img src='http:\/\/themecanon.net\/themes\/sport-1\/wp-content\/themes\/sport\/img\/banner_468x60.gif'><\/a>", "header_text": "Phone: 555 555  1234", "toolbar_search_button": "checked", "countdown_datetime_string": "December 31, 2023 23:59:59", "countdown_gmt_offset": "+10", "countdown_description": "Next Match: ", "show_social_icons": "checked", "social_in_new": "checked", "social_links": [["fa-facebook-square", "https:\/\/www.facebook.com\/themecanon"], ["fa-twitter-square", "https:\/\/twitter.com\/ThemeCanon"], ["fa-rss-square", "http:\/\/themecanon.net\/themes\/sport-1\/feed\/"]], "show_pre_footer": "checked", "show_main_footer": "checked", "show_post_footer": "checked", "footer_text": "\u00a9 Copyright Sport by <a href=\"http:\/\/www.themecanon.com\" target=\"_blank\">Theme Canon<\/a>", "pre_custom_center": "off", "pre_custom_left": "secondary", "pre_custom_right": "countdown", "main_custom_center": "off", "post_custom_center": "off", "post_custom_left": "social", "post_custom_right": "toolbar", "logo_text": "" }, "canonOptionsPost": { "show_tags": "checked", "show_post_nav": "checked", "post_nav_same_cat": "unchecked", "show_comments": "checked", "show_person_position": "checked", "show_person_info": "checked", "show_person_nav": "checked", "person_nav_same_cat": "unchecked", "show_meta_author": "checked", "show_meta_date": "checked", "show_meta_comments": "checked", "homepage_blog_style": "full", "blog_style": "full", "cat_style": "full", "archive_excerpt_length": "325", "show_cat_title": "unchecked", "show_cat_description": "unchecked", "search_box_text": "What are you looking for?", "search_posts": "checked", "search_pages": "unchecked", "search_cpt": "unchecked", "search_cpt_source": "cpt_people, cpt_project", "404_title": "Page not found", "404_msg": "Sorry, you're lost my friend, the page you're looking for does not exist anymore. Take your luck at searching for a new one.", "use_woocommerce_sidebar": "checked", "woocommerce_sidebar": "canon_woocommerce_widget_area", "use_buddypress_sidebar": "checked", "buddypress_sidebar": "canon_buddypress_widget_area", "use_bbpress_sidebar": "checked", "bbpress_sidebar": "canon_bbpress_widget_area", "use_events_sidebar": "checked", "events_sidebar": "canon_cwa_single-event" }, "canonOptionsAppearance": { "body_skin_class": "", "color_body": "#f1f1f1", "color_plate": "#ffffff", "color_general_text": "#3d4942", "color_links": "#3d4942", "color_links_hover": "#ffba00", "color_headings": "#004720", "color_text_2": "#1c2721", "color_text_3": "#bdbdbd", "color_text_logo": "#ffffff", "color_feat_text_1": "#14934d", "color_feat_text_2": "#ffba00", "color_white_text": "#ffffff", "color_preheader_bg": "#1c2721", "color_preheader": "#ffffff", "color_preheader_hover": "#ffba00", "color_header_bg": "#00632c", "color_header": "#ffffff", "color_header_hover": "#ffba00", "color_postheader_bg": "#004720", "color_postheader": "#ffffff", "color_postheader_hover": "#ffba00", "color_third_prenav": "#003919", "color_third_nav": "#003919", "color_third_postnav": "#003919", "color_sidr_bg": "#1c2721", "color_sidr": "#ffffff", "color_sidr_hover": "#ffba00", "color_sidr_line": "#2d3a33", "color_btn_1_bg": "#00632c", "color_btn_1_hover_bg": "#1c2721", "color_btn_1": "#ffffff", "color_btn_2_bg": "#ffba00", "color_btn_2_hover_bg": "#00632c", "color_btn_2": "#ffffff", "color_btn_3_bg": "#eaeaea", "color_btn_3_hover_bg": "#ffba00", "color_btn_3": "#505a54", "color_feat_block_1": "#f4f4f4", "color_feat_block_2": "#ececec", "color_lite_block": "#f7f7f7", "color_form_fields_bg": "#f2f2f2", "color_form_fields_text": "#969ca5", "color_lines": "#eaeaea", "color_footer_block": "#004720", "color_footer_headings": "#ffffff", "color_footer_text": "#f0f6f3", "color_footer_text_hover": "#ffba00", "color_footlines": "#255f3f", "color_footer_button": "#ffba00", "color_footer_form_fields_bg": "#003919", "color_footer_form_fields_text": "#f0f6f3", "color_footer_alt_block": "#1c2721", "color_footer_base": "#1c2721", "color_footer_base_text": "#ffffff", "color_footer_base_text_hover": "#ffba00", "bg_img_url": "", "bg_link": "", "bg_repeat": "repeat", "bg_attachment": "fixed", "lightbox_overlay_color": "#000000", "lightbox_overlay_opacity": "0.7", "font_main": ["canon_default", "", ""], "font_quote": ["canon_default", "", ""], "font_lead": ["canon_default", "", ""], "font_logotext": ["canon_default", "", ""], "font_bold": ["canon_default", "", ""], "font_button": ["canon_default", "", ""], "font_italic": ["canon_default", "", ""], "font_heading": ["canon_default", "", ""], "font_heading2": ["canon_default", "", ""], "font_nav": ["canon_default", "", ""], "font_widget_footer": ["canon_default", "", ""], "anim_img_slider_slideshow": "unchecked", "anim_img_slider_delay": "5000", "anim_img_slider_anim_duration": "800", "anim_quote_slider_slideshow": "unchecked", "anim_quote_slider_delay": "5000", "anim_quote_slider_anim_duration": "800", "anim_menu_slider_slideshow": "unchecked", "anim_menu_slider_delay": "5000", "anim_menu_slider_anim_duration": "800", "lazy_load_on_pagebuilder_blocks": "checked", "lazy_load_on_blog": "checked", "lazy_load_on_widgets": "checked", "lazy_load_after": 0.3, "lazy_load_enter": "bottom", "lazy_load_move": 24, "lazy_load_over": 0.56, "lazy_load_viewport_factor": 0.2, "anim_menus": ".nav", "anim_menus_enter": "left", "anim_menus_move": 40, "anim_menus_duration": 600, "anim_menus_delay": 150 }, "canonOptionsAdvanced": { "reset_all": "", "reset_basic": "", "custom_widget_areas": { "9999": { "name": "" }, "0": { "name": "Custom Widget Area 1" }, "1": { "name": "Custom Widget Area 2" }, "2": { "name": "Custom Widget Area 3" }, "3": { "name": "Single Event" }, "4": { "name": "Facebook" }, "5": { "name": "Twitter" }, "6": { "name": "Hours" }, "7": { "name": "Reviews" }, "8": { "name": "Tabs" }, "9": { "name": "Accordions" }, "10": { "name": "Facts" }, "11": { "name": "Stats" }, "12": { "name": "Gallery" }, "13": { "name": "More Posts" } }, "use_final_call_css": "checked", "final_call_css": "\/* FOR PREVIEW SITE ONLY *\/\r\n\r\n.woocommerce ul.products li.product{\r\n    width: 22%;\r\n    margin-right: 4%;\r\n}\r\n.woocommerce ul.products li.product:nth-child(4n+4){\r\n    margin-right: 0%;\r\n}\r\n.woocommerce ul.products li.product .star-rating{\r\n    display: none;\r\n}\r\n.widget.woocommerce ul.product_list_widget li:before{\r\n\tdisplay: none;\r\n}\r\n.main-header.right .header_banner {\r\n    margin-top: -30px !important;\r\n}\r\n\r\n\r\n.single-tribe_events .tribe-events-meta-group, .single-tribe_events .tribe-events-venue-map{\r\n    margin-right: 1%;\r\n}\r\n.tribe-events-tooltip .duration{\r\n    font-style: normal;\r\n}\r\n.tribe-events-list-widget ol li:before{\r\n    top: 1px;\r\n}\r\nul.statistics li{ border-bottom-style: solid; border-bottom-width: 1px;}\r\n\r\n.fullscreenvideo.fullcoveredvideo{ left:0!important;}\r\n\r\n.sticky:before{ z-index: 1; right: 5px; top: 0px;}\r\n\r\n\r\n.header-container ul.nav .fa-car{\r\n    background: #ffba00;\r\n   -webkit-border-radius: 0 3px 3px 0;\r\nborder-radius: 0 3px 3px 0;\r\n    position: fixed;\r\n    top: 137px!important;\r\n    left: -5px!important;\r\n    width: 90px;\r\n    height: 35px;\r\n    padding: 0px 5px 0px 8px!important;\r\n    z-index: 999;\r\n    -webkit-transition: all 350ms ease-in-out;\r\n    -moz-transition: all 350ms ease-in-out;\r\n    -ms-transition: all 350ms ease-in-out;\r\n    -o-transition: all 350ms ease-in-out;\r\n    transition: all 350ms ease-in-out;\r\n    font-size: 13px;\r\n    color: #333!important;\r\n}\r\n.header-container ul.nav .fa-car:hover{\r\n    background: #333;\r\n}\r\n.header-container ul.nav .fa-car a:hover,\r\n.header-container ul.nav .fa-car:hover{\r\n    color: #fff!important;\r\n}\r\n.header-container ul.nav .fa-car a{\r\n    color: #333!important;\r\n    font-size: 14px;\r\n    background: #none!important;\r\n}", "canon_options_data": "", "import_data": "" } };
+        var extDataAutocomplete = { "autocompleteArray": ["c++", "jquery", "I like jQuery", "java", "php", "coldfusion", "javascript", "asp", "ruby"] };
+/* ]]> */
+    </script>
+
+
+
+</body>
+
+<style>
+
+    .fade {
+        height: 160px;
+    }
+
+</style>
